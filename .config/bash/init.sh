@@ -20,3 +20,8 @@ if [ -x "$HOME/.cargo" ]; then
   . "$HOME/.cargo/env"
 fi
 
+# Deno
+if [ -x "$HOME/.deno" ]; then
+  . "/home/dr4ghs/.deno/env"
+fi
+
