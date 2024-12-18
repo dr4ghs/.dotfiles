@@ -76,6 +76,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # Alias definitions.
+
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
@@ -89,5 +90,13 @@ if ! shopt -oq posix; then
   elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
   fi
+fi
+
+for FILE in ~/.config/bash/*.sh; do source $FILE; done
+
+# Start tmux on startup
+if [ -z $TMUX ]; then
+  tmux new -s Main
+  tmux renamew Home
 fi
 
