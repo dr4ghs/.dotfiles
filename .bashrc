@@ -92,7 +92,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-for FILE in ~/.config/bash/*.sh; do source $FILE; done
+. $HOME/.config/bash/init.sh
 
 # Start tmux on startup
 if [ -z $TMUX ]; then

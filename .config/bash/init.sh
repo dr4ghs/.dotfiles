@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 # Load all programs setup
-for FILE in ./programs/*.sh; do source $FILE; done
+for FILE in $HOME/.config/bash/programs/*.sh; do source $FILE; done
 
 # Env vars
-export PATH=$PATH:/usr/local/go/bin:~/go/bin
+export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 
 # Zoxide 
 eval "$(zoxide init bash)"
@@ -13,7 +13,7 @@ eval "$(zoxide init bash)"
 eval "$(starship init bash)"
 
 # fzf
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f $HOME/.fzf.bash ] && source $HOME/.fzf.bash
 
 # Cargo
 if [ -x "$HOME/.cargo" ]; then
