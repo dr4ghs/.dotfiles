@@ -1,0 +1,18 @@
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[user]
+	name = dr4ghs
+	email = alvise.gorinati@agsystem.dev
+[core]
+	editor = nvim
+[alias]
+	aa = add .
+	ll = log --oneline
+	co = checkout
+	main = checkout main
+	last = log -1 HEAD
+	alias = config --get-regexp ^alias\\.
