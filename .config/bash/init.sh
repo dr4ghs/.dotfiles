@@ -22,6 +22,6 @@ fi
 
 # Deno
 if [ -x "$HOME/.deno" ]; then
-  . "/home/dr4ghs/.deno/env"
+  . "$HOME/.deno/env"
 fi
 
