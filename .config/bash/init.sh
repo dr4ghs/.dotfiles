@@ -13,3 +13,6 @@ eval "$(zoxide init bash --cmd cd)" # Zoxide
 [ -x "$HOME/.cargo" ] && source "$HOME/.cargo/env" # Cargo
 [ -x "$HOME/.deno" ] && . "$HOME/.deno/env" # Deno
 
+# Platform dependent programs initialization
+[ -f "$HOME/.config/bash/custom.sh" ] && source "$HOME/.config/bash/custom.sh" 
+
