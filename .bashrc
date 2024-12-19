@@ -101,7 +101,11 @@ source $HOME/.config/bash/init.sh
 
 # Launch tmux on startup
 if [ -z $TMUX ]; then
-  tmux new -s Main
-  tmux renamew Home
+  if [ -z "$(tmux display-message -p '#S')" ]; then
+    tmux new -s Main
+    tmux renamew Home
+  else
+    tmux a
+  fi
 fi
 
