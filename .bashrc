@@ -92,9 +92,14 @@ if ! shopt -oq posix; then
   fi
 fi
 
-. $HOME/.config/bash/init.sh
+# Local binaries
+[ -d "$HOME/bin" ] && PATH="$HOME/bin:$PATH"
+[ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"
 
-# Start tmux on startup
+# Initialize Bash
+source $HOME/.config/bash/init.sh
+
+# Launch tmux on startup
 if [ -z $TMUX ]; then
   tmux new -s Main
   tmux renamew Home

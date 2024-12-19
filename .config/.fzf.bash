@@ -1,13 +1,14 @@
 # Setup fzf
 # ---------
-if [[ ! "$PATH" == */home/dr4ghs/programs/fzf/bin* ]]; then
-  PATH="${PATH:+${PATH}:}/home/dr4ghs/programs/fzf/bin"
+if [[ ! "$PATH" == *$HOME/.local/programs/fzf/bin* ]]; then
+  PATH="${PATH:+${PATH}:}$HOME/.local/programs/fzf/bin"
 fi
 
 # Auto-completion
 # ---------------
-source "/home/dr4ghs/programs/fzf/shell/completion.bash"
+source "$HOME/.local/programs/fzf/shell/completion.bash"
 
 # Key bindings
 # ------------
-# source "/home/dr4ghs/programs/fzf/shell/key-bindings.bash"
+source "$HOME/.local/programs/fzf/shell/key-bindings.bash"
+

@@ -120,8 +120,3 @@ if [[ ${BASH_VERSINFO[0]:-0} -eq 4 && ${BASH_VERSINFO[1]:-0} -ge 4 || ${BASH_VER
     \builtin complete -r cdi &>/dev/null || \builtin true
 fi
 
-# =============================================================================
-#
-# To initialize zoxide, add this to your configuration (usually ~/.bashrc):
-#
-# eval "$(zoxide init bash)"
