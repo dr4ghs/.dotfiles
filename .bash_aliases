@@ -6,4 +6,5 @@ alias rld='. ~/.bashrc'
 alias vim=nvim
 
 alias xcp='xargs echo -n | xclip -selection c'
+alias xcv='xclip -o -selection c'
 
